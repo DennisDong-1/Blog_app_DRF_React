@@ -1,0 +1,7 @@
+python manage.py makemigrations --dry-run --verbosity 3
+python manage.py runserver
+python manage.py createsuperuser
+python install coverage
+coverage run --omit='/drf_env/*' manage.py test
+coverage html
+pip install djangorestframework
